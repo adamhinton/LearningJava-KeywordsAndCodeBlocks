@@ -7,7 +7,7 @@ public class MainChallenge {
 
         int finalScore = score;
 
-        if(gameOver == true){
+        if(gameOver){
             finalScore += (levelCompleted * bonus);
             System.out.println("Your final score was " + finalScore);
         }
