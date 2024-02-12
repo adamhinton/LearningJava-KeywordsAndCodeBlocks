@@ -1,45 +1,41 @@
 public class MainChallenge {
 
     public static void main(String[] args) {
+        int score = 1500;
+        int position = calculateHighScorePosition(score);
+        displayHighScorePosition("Adam", position);
 
-        boolean gameOver= true;
-        int score = 800;
-        int levelCompleted = 5;
-        int bonus = 100;
+        score = 1000;
+        position = calculateHighScorePosition(score);
+        displayHighScorePosition("Adam", position);
 
-        int highScore = calculateScore(gameOver, score, levelCompleted, bonus);
+        score = 500;
+        position = calculateHighScorePosition(score);
+        displayHighScorePosition("Adam", position);
 
-        System.out.println("High score:" + highScore);
+        score = 100;
+        position = calculateHighScorePosition(score);
+        displayHighScorePosition("Adam", position);
 
-        score = 10000;
-        levelCompleted = 8;
-        bonus = 200;
+        score = 25;
+        position = calculateHighScorePosition(score);
+        displayHighScorePosition("Adam", position);
 
-        calculateScore(gameOver, score, levelCompleted, bonus);
     }
 
-    public static int calculateScore
-            (boolean gameOver,
-             int score,
-             int levelCompleted,
-             int bonus) {
+    public static void displayHighScorePosition(String playerName, int position) {
+        System.out.println(playerName + " managed to get in to position " + position + "on the high score list");
+    }
 
-        int finalScore = score;
-
-        if (gameOver) {
-            finalScore += (levelCompleted * bonus);
-            finalScore += 1000;
+    public static int calculateHighScorePosition(int score) {
+        if (score >= 1000) {
+            return 1;
+        } else if (score >= 500) {
+            return 2;
+        } else if (score >= 100) {
+            return 3;
+        } else {
+            return 4;
         }
-
-        return finalScore;
-
-    }
-
-    public static void displayHighScorePosition(){
-
-    }
-
-    public static int calculateHighScorePosition(){
-
     }
 }
