@@ -1,4 +1,6 @@
 public class MainChallenge {
+    public static final int BOB = 1000;
+
     public static void main(String[] args) {
         boolean gameOver = true;
         int score = 10_000;
@@ -7,7 +9,7 @@ public class MainChallenge {
 
         int finalScore = score;
 
-        if(gameOver){
+        if (gameOver) {
             finalScore += (levelCompleted * bonus);
             System.out.println("Your final score was " + finalScore);
         }
