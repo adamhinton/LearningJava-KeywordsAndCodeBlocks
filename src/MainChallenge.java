@@ -1,6 +1,11 @@
 public class MainChallenge {
 
     public static void main(String[] args) {
+        calculateScore();
+    }
+
+    public static void calculateScore() {
+
         boolean gameOver = true;
         int score = 10_000;
         int levelCompleted = 8;
@@ -13,10 +18,6 @@ public class MainChallenge {
             finalScore += 1000;
             System.out.println("Your final score was " + finalScore);
         }
-    }
-
-    public static void calculateScore(){
 
     }
-
 }
