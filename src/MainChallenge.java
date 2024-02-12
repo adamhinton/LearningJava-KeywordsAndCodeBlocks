@@ -34,4 +34,12 @@ public class MainChallenge {
         return finalScore;
 
     }
+
+    public static void displayHighScorePosition(){
+
+    }
+
+    public static int calculateHighScorePosition(){
+
+    }
 }
